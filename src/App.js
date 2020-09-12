@@ -19,7 +19,12 @@ const addTodo = (text) => {
 
 const completeTodo = (index) => {
   const newTodos = [...todos];
-  newTodos[index].isCompleted = true;
+  if (newTodos[index].isCompleted === false){
+    newTodos[index].isCompleted = true
+  } else {
+    newTodos[index].isCompleted = false
+  }
+
   setTodos(newTodos);
 }
 
